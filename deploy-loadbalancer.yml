@@ -16,7 +16,7 @@ spec:
       - name: ak-web-app
         image: limarktest/webapp:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         
 # service type loadbalancer       
 ---
@@ -29,6 +29,6 @@ spec:
     app: ak-web-app
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 80
+      targetPort: 80
   type: LoadBalancer
